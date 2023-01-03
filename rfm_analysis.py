@@ -12,9 +12,9 @@ data= data[pd.notnull(data['CustomerID'])]
 
 data = data[(data['Amount']>0) ] #& (data['InvoiceNo'] == 53181)]
 
-distinct_data = data.groupby(['InvoiceDate', 'InvoiceNo', 'CustomerID', 'Name'])['Amount'].sum().reset_index()
+distinct_data = data.groupby(['InvoiceDate', 'InvoiceNo', 'CustomerID'])['Amount'].sum().reset_index()
 
-rfm= distinct_data.groupby('Name').agg({'InvoiceDate': lambda date: (PRESENT - date.max()).days,
+rfm= distinct_data.groupby('CustomerID').agg({'InvoiceDate': lambda date: (PRESENT - date.max()).days,
                                         'InvoiceNo': lambda num: len(num),
                                         'Amount': lambda price: price.sum()})
 rfm.columns=['recency','frequency','monetary']
@@ -26,12 +26,14 @@ rfm['f_quartile'] = pd.qcut(rfm['frequency'], q = 4, labels = False, duplicates=
 rfm['m_quartile'] = pd.qcut(rfm['monetary'], q = 4, labels = False, duplicates="drop")
 rfm['RFM_Score'] = rfm.r_quartile.astype(str)+ rfm.f_quartile.astype(str) + rfm.m_quartile.astype(str)
 
+
+
 rfm.to_csv('rfm_analysis.csv', header=True)
+
 
 #Core - Your Best Customers RFM group 023
 #New product introductions
 output = rfm[rfm['RFM_Score']=='023'].sort_values('monetary', ascending=False)
-print(output)
 
 #High-spending New Customers — This group consists of those customers in 0-1-3. 
 #These are customers who transacted only once, but very recently and they spent a lot.
