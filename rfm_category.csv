@@ -1,0 +1,65 @@
+RFM_SCORE,R,F,M,Category
+210,2,1,0,About To Sleep
+211,2,1,1,About To Sleep
+220,2,2,0,About To Sleep
+221,2,2,1,About To Sleep
+230,2,3,0,About To Sleep
+231,2,3,1,About To Sleep
+302,3,0,2,Can't Loose
+303,3,0,3,Can't Loose
+312,3,1,2,Can't Loose
+313,3,1,3,Can't Loose
+322,3,2,2,Can't Loose
+323,3,2,3,Can't Loose
+332,3,3,2,Can't Loose
+333,3,3,3,Can't Loose
+022,0,2,2,Champion
+023,0,2,3,Champion
+032,0,3,2,Champion
+033,0,3,3,Champion
+132,1,3,2,Champion
+133,1,3,3,Champion
+300,3,0,0,Lost
+301,3,0,1,Lost
+310,3,1,0,Lost
+311,3,1,1,Lost
+320,3,2,0,Lost
+321,3,2,1,Lost
+330,3,3,0,Lost
+331,3,3,1,Lost
+113,1,1,3,Loyal
+112,1,1,2,Loyal
+212,2,1,2,Loyal
+213,2,1,3,Loyal
+123,1,2,3,Loyal
+122,1,2,2,Loyal
+222,2,2,2,Loyal
+223,2,2,3,Loyal
+000,0,0,0,New Customer
+100,1,0,0,New Customer
+001,0,0,1,New Customer
+101,1,0,1,New Customer
+002,0,0,2,New Customer
+102,1,0,2,New Customer
+003,0,0,3,New Customer
+103,1,0,3,New Customer
+111,1,1,1,New Customer
+110,1,1,0,New Customer
+121,1,2,1,New Customer
+120,1,2,0,New Customer
+130,1,3,0,New Customer
+131,1,3,1,New Customer
+020,0,2,0,Potential Loyalist
+021,0,2,1,Potential Loyalist
+030,0,3,0,Potential Loyalist
+031,0,3,1,Potential Loyalist
+010,0,1,0,Potential Loyalist
+011,0,1,1,Potential Loyalist
+012,0,1,2,Potential Loyalist
+013,0,1,3,Potential Loyalist
+200,2,0,0,Promising
+201,2,0,1,Promising
+202,2,0,2,Promising
+203,2,0,3,Promising
+232,2,3,2,Promising
+233,2,3,3,Promising
